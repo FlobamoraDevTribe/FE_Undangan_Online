@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.workspace-container {
+   @apply fixed h-full w-full overflow-hidden;
+
+   .canvas {
+      @apply absolute overflow-hidden w-[414px] h-screen bg-[#FFF6DE];
+
+      .frame-landing-page {
+         @apply py-[70px];
+
+         .wp-image-landing-page {
+            @apply flex justify-center items-center;
+
+            img {
+               @apply object-cover object-center bg-white rounded-[40px] border border-gray-300 h-[430px] shadow-2xl;
+            }
+         }
+      }
+   }
+}

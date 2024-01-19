@@ -9,13 +9,13 @@
       @apply absolute overflow-hidden w-[414px] h-screen bg-[#FFF6DE];
 
       .frame-landing-page {
-         @apply py-[70px];
+         @apply flex flex-col justify-evenly h-full py-8 md:py-14 2xl:py-[70px];
 
          .wp-image-landing-page {
             @apply flex justify-center items-center;
 
             img {
-               @apply object-cover object-center bg-white rounded-[40px] border border-gray-300 h-[430px] shadow-2xl;
+               @apply object-cover object-center bg-white rounded-[40px] border border-gray-300 shadow-2xl;
             }
          }
       }

@@ -6,7 +6,7 @@ export default {
          container: {
             center: true,
             padding: {
-               DEFAULT: '1rem',
+               DEFAULT: '1.875rem',
                //  sm: '2rem',
                //  lg: '4rem',
                //  xl: '5rem',
@@ -25,5 +25,5 @@ export default {
          },
       },
    },
-   plugins: [],
+   plugins: [require('tailwind-scrollbar-hide')],
 }

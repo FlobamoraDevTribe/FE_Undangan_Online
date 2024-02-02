@@ -2,22 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+// Base Container Start
 .workspace-container {
    @apply fixed h-full w-full overflow-hidden;
 
    .canvas {
       @apply absolute overflow-hidden w-[414px] h-screen bg-[#FFF6DE];
+   }
+}
+// Base Container End
 
-      .frame-landing-page {
-         @apply flex flex-col justify-evenly h-full py-8 md:py-14 2xl:py-[70px];
+// Base Wave Start
+.padding-wave {
+   @apply pt-[80px] pb-[75px];
+}
 
-         .wp-image-landing-page {
-            @apply flex justify-center items-center;
+.wp-wave-frame {
+   .frame-wave-top {
+      position: absolute;
+      top: 0;
+      z-index: 20;
+   }
 
-            img {
-               @apply object-cover object-center bg-white rounded-[40px] border border-gray-300 shadow-2xl;
-            }
-         }
+   .frame-wave-bottom {
+      position: absolute;
+      bottom: 0;
+      z-index: 20;
+   }
+
+   .frame-bg-tr {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+   }
+
+   .frame-bg-bl {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+   }
+}
+// Base Wave End
+
+// Home Page Start
+.frame-landing-page {
+   @apply flex flex-col justify-evenly h-full py-8 md:py-14 2xl:py-[70px];
+
+   .wp-image-landing-page {
+      @apply flex justify-center items-center;
+
+      img {
+         @apply object-cover object-center bg-white rounded-[40px] border border-gray-300 shadow-2xl;
       }
    }
 }
+// Home Page End
+
+@import 'typography';

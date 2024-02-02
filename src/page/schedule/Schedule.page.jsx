@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import Wrap from '../../component/layout/Wrap'
+import { ButtonPrimary } from '../../component/general/Button'
+import { withNavigation } from '../../component/layout/Navigation'
 
 class SchedulePage extends Component {
    render() {
@@ -7,7 +9,15 @@ class SchedulePage extends Component {
          <Wrap hasWave hasOptionalBG>
             <div className="container padding-wave h-full overflow-y-auto scrollbar-hide">
                <div className="content relative z-10">
-                  <p>Example text</p>
+                  <p className="text-base mb-4">Example text</p>
+
+                  <ButtonPrimary
+                     onClick={() => {
+                        this.props.navigate('/')
+                     }}
+                     extraClassName="uppercase rounded-lg">
+                     Back
+                  </ButtonPrimary>
                </div>
             </div>
          </Wrap>
@@ -15,4 +25,4 @@ class SchedulePage extends Component {
    }
 }
 
-export default SchedulePage
+export default withNavigation(SchedulePage)

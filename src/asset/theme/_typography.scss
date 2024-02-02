@@ -1,0 +1,65 @@
+// Start Base Heading Size
+@mixin config_font_size($size) {
+   font-size: $size;
+}
+
+@mixin sizeH1 {
+   @include config_font_size(2.5rem);
+}
+@mixin sizeH2 {
+   @include config_font_size(3rem);
+}
+@mixin sizeH3 {
+   @include config_font_size(2.625rem);
+}
+@mixin sizeH4 {
+   @include config_font_size(2rem);
+}
+@mixin sizeH5 {
+   @include config_font_size(1.5rem);
+}
+@mixin sizeH6 {
+   @include config_font_size(1.125rem);
+}
+
+h1 {
+   @include sizeH1;
+   line-height: 2.75rem;
+}
+h2 {
+   @include sizeH2;
+}
+h3 {
+   @include sizeH3;
+}
+h4 {
+   @include sizeH4;
+}
+h5 {
+   @include sizeH5;
+}
+h6 {
+   @include sizeH6;
+}
+// End Base Heading Size
+
+// Use Wrap text size in H1 - h6
+.wp-text-h1 * {
+   @include config_font_size(4.5rem);
+}
+.wp-text-h2 * {
+   @include config_font_size(3rem);
+}
+.wp-text-h3 * {
+   @include config_font_size(2.625rem);
+}
+.wp-text-h4 * {
+   @include config_font_size(2rem);
+}
+.wp-text-h5 * {
+   @include config_font_size(1.5rem);
+}
+.wp-text-h6 * {
+   @include config_font_size(1.125rem);
+}
+// Use Wrap text size in H1 - h6

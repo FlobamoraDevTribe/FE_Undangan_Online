@@ -8,7 +8,7 @@ class BridePage extends Component {
             <Wrap hasWave hasOptionalBG>
                 <div className="padding-wave h-full overflow-y-auto scrollbar-hide">
                     <div className="content relative z-10 h-full">
-                        <div className="flex flex-col justify-between pb-20">
+                        <div className="flex flex-col justify-between">
                             <div className="container">
                                 <h1 className="w-full text-center uppercase font-normal">Mempelai</h1>
                                 <p className="text-center mt-[2vh]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum sint porro.</p>
@@ -23,7 +23,7 @@ class BridePage extends Component {
                                 />
                             </div>
 
-                            <div className="container bride-info text-center mt-5">
+                            <div className="container bride-info text-center bg-[url('/images/img-shape-wave.png')] bg-contain bg-no-repeat h-full bg-center -mt-60 pb-20 pt-48 text-white">
                                 <h4>Marten Delacrona</h4>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima accusamus dicta sint</p>
                                 <h3>VS</h3>

@@ -15,18 +15,24 @@ class BridePage extends Component {
                             </div>
 
 
-                            <div className="bride-img mt-10 w-full">
+                            <div className="mt-10 w-full">
                                 <img
                                     src="/images/img-bride-page.png"
-                                    alt="Image Landing Page"
+                                    alt="Images Bride"
                                     className="w-full rounded-[30px]"
                                 />
                             </div>
 
-                            <div className="container bride-info text-center bg-[url('/images/img-shape-wave.png')] bg-contain bg-no-repeat h-full bg-center -mt-60 pb-20 pt-48 text-white">
+                            <div className="container text-center bg-[url('/images/img-shape-wave.png')] bg-auto bg-no-repeat w-full bg-center -mt-60 pb-20 pt-48 text-white">
                                 <h4>Marten Delacrona</h4>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minima accusamus dicta sint</p>
-                                <h3>VS</h3>
+
+                                <img
+                                    className="my-5 m-auto"
+                                    src="/images/img-ring.png"
+                                    alt="Ring Images"
+                                />
+
                                 <h4>Mince Saputri</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque fugit architecto quaerat</p>
                             </div>

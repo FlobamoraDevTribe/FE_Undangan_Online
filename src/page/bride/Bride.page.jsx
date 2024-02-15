@@ -6,7 +6,14 @@ import PageTitle from '../../component/general/PageTitle'
 class BridePage extends Component {
    render() {
       return (
-         <Wrap hasWave hasOptionalBG hasDefaultContainer={false}>
+         <Wrap
+            hasWave
+            hasOptionalBG
+            hasDefaultContainer={false}
+            actions={{
+               prev: () => this.props.navigate('/schedule'),
+               next: () => this.props.navigate('/direction'),
+            }}>
             <div className="content relative z-10 h-full">
                <div className="flex flex-col justify-between">
                   <div className="container">

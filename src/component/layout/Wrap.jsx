@@ -2,12 +2,17 @@ import ImgWaveTop from '../../asset/image/content/motif-top.png'
 import ImgWaveBottom from '../../asset/image/content/motif-bottom.png'
 import ImgFlowerTopRight from '../../asset/image/content/flower-top-right.png'
 import ImgFlowerBottomLeft from '../../asset/image/content/flower-bottom-left.png'
+import FloatingButton from '../general/FloatingButton'
 
 const Wrap = ({
    hasWave = false,
    hasOptionalBG = false,
    hasDefaultContainer = true,
    children,
+   actions = {
+      prev: () => {},
+      next: () => {},
+   },
 }) => {
    return (
       <div className="workspace-container">
@@ -61,6 +66,17 @@ const Wrap = ({
                         />
                      </div>
                   ) : null}
+
+                  {/* Example Floating Button Start */}
+                  {hasWave ? (
+                     <FloatingButton
+                        actions={{
+                           prev: actions.prev,
+                           next: actions.next,
+                        }}
+                     />
+                  ) : null}
+                  {/* Example Floating Button End */}
                </div>
             </div>
          </div>

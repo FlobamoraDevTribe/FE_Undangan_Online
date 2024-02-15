@@ -29,7 +29,13 @@ class GaleryPage extends Component {
       ]
 
       return (
-         <Wrap hasWave hasOptionalBG>
+         <Wrap
+            hasWave
+            hasOptionalBG
+            actions={{
+               prev: () => this.props.navigate('/direction'),
+               next: () => this.props.navigate('/'),
+            }}>
             <div className="content relative z-10">
                <PageTitle title="Photo Galery" extraClassTitle="uppercase" />
 

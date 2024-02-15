@@ -2,6 +2,7 @@ import { Component } from 'react'
 import Wrap from '../../component/layout/Wrap'
 import PageTitle from '../../component/general/PageTitle'
 import MapPreview from '../../asset/image/content/map.jpg'
+import { withNavigation } from '../../component/layout/Navigation'
 
 const mapData = [
    {
@@ -18,7 +19,13 @@ const mapData = [
 class DirectionPage extends Component {
    render() {
       return (
-         <Wrap hasWave hasOptionalBG>
+         <Wrap
+            hasWave
+            hasOptionalBG
+            actions={{
+               prev: () => this.props.navigate('/bride'),
+               next: () => this.props.navigate('/galery'),
+            }}>
             <div className="content relative z-10">
                <div className="mb-6">
                   <PageTitle title="Detail Acara" extraClassTitle="uppercase" />
@@ -60,4 +67,4 @@ class DirectionPage extends Component {
    }
 }
 
-export default DirectionPage
+export default withNavigation(DirectionPage)

@@ -4,7 +4,7 @@
 }
 
 @mixin sizeH1 {
-   @include config_font_size(2.5rem);
+   @include config_font_size(1.75rem);
 }
 @mixin sizeH2 {
    @include config_font_size(3rem);
@@ -24,7 +24,7 @@
 
 h1 {
    @include sizeH1;
-   line-height: 2.75rem;
+   line-height: 2rem;
 }
 h2 {
    @include sizeH2;

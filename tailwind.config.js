@@ -15,6 +15,8 @@ export default {
          },
          colors: {
             primary: '#27668C',
+            secondary: '#FFD984',
+            tint: '#FFF6DE',
          },
          screens: {
             sm: '640px',

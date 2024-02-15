@@ -2,19 +2,23 @@ import { Component } from 'react'
 import { ButtonPrimary } from '../../component/general/Button'
 import Wrap from '../../component/layout/Wrap'
 import { withNavigation } from '../../component/layout/Navigation'
+import PageTitle from '../../component/general/PageTitle'
 
 class HomePage extends Component {
    render() {
       return (
-         <Wrap>
+         <Wrap hasDefaultContainer={false}>
             <div className="container frame-landing-page">
                <div className="greetings">
-                  <p className="text-base font-normal text-primary text-center">
-                     You are invited to our wedding
-                  </p>
-                  <h1 className="font-bold text-primary text-center">
-                     Marten & Mince
-                  </h1>
+                  <PageTitle
+                     title="Marten & Mince"
+                     extraClassTitle="text-4xl"
+                     externalContent={
+                        <p className="text-sm font-normal text-primary text-center mb-0">
+                           You are invited to our wedding
+                        </p>
+                     }
+                  />
                </div>
 
                <div className="wp-image-landing-page my-0 md:my-auto 2xl:my-0">

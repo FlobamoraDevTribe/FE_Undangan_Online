@@ -3,7 +3,12 @@ import ImgWaveBottom from '../../asset/image/content/motif-bottom.png'
 import ImgFlowerTopRight from '../../asset/image/content/flower-top-right.png'
 import ImgFlowerBottomLeft from '../../asset/image/content/flower-bottom-left.png'
 
-const Wrap = ({ hasWave = false, hasOptionalBG = false, children }) => {
+const Wrap = ({
+   hasWave = false,
+   hasOptionalBG = false,
+   hasDefaultContainer = true,
+   children,
+}) => {
    return (
       <div className="workspace-container">
          <div
@@ -15,22 +20,32 @@ const Wrap = ({ hasWave = false, hasOptionalBG = false, children }) => {
             }}>
             <div className="flex items-center justify-center h-full w-full">
                <div className="canvas">
-                  {children}
-
                   {hasWave ? (
-                     <div className="wp-wave-frame">
-                        <img
-                           src={ImgWaveTop}
-                           className="frame-wave-top"
-                           alt="motif-top"
-                        />
-                        <img
-                           src={ImgWaveBottom}
-                           className="frame-wave-bottom"
-                           alt="motif-bottom"
-                        />
-                     </div>
-                  ) : null}
+                     <>
+                        <div
+                           className={
+                              (hasDefaultContainer ? 'container' : '') +
+                              ' padding-wave h-full overflow-y-auto scrollbar-hide'
+                           }>
+                           {children}
+                        </div>
+
+                        <div className="wp-wave-frame">
+                           <img
+                              src={ImgWaveTop}
+                              className="frame-wave-top"
+                              alt="motif-top"
+                           />
+                           <img
+                              src={ImgWaveBottom}
+                              className="frame-wave-bottom"
+                              alt="motif-bottom"
+                           />
+                        </div>
+                     </>
+                  ) : (
+                     children
+                  )}
 
                   {hasOptionalBG ? (
                      <div className="wp-wave-frame">

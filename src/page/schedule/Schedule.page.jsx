@@ -7,18 +7,16 @@ class SchedulePage extends Component {
    render() {
       return (
          <Wrap hasWave hasOptionalBG>
-            <div className="container padding-wave h-full overflow-y-auto scrollbar-hide">
-               <div className="content relative z-10">
-                  <p className="text-base mb-4">Example text</p>
+            <div className="content relative z-10">
+               <p className="text-base mb-4">Example text</p>
 
-                  <ButtonPrimary
-                     onClick={() => {
-                        this.props.navigate('/')
-                     }}
-                     extraClassName="uppercase rounded-lg">
-                     Back
-                  </ButtonPrimary>
-               </div>
+               <ButtonPrimary
+                  onClick={() => {
+                     this.props.navigate('/')
+                  }}
+                  extraClassName="uppercase rounded-lg">
+                  Back
+               </ButtonPrimary>
             </div>
          </Wrap>
       )

@@ -45,7 +45,6 @@
       z-index: 2;
    }
 }
-
 // Base Wave End
 
 // Home Page Start
@@ -60,8 +59,19 @@
       }
    }
 }
-
 // Home Page End
 
+.custom-border-card-dashed {
+   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='18' ry='18' stroke='%2327668CFF' stroke-width='3' stroke-dasharray='10' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+   border-radius: 18px;
+   background-position: center;
+   background-size: contain;
+}
+
+.wp-direction {
+   .card {
+      @apply mb-4;
+   }
+}
 
 @import 'typography';

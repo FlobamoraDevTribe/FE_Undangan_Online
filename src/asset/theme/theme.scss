@@ -10,6 +10,7 @@
       @apply absolute overflow-hidden w-[414px] h-screen bg-[#FFF6DE];
    }
 }
+
 // Base Container End
 
 // Base Wave Start
@@ -44,6 +45,7 @@
       z-index: 2;
    }
 }
+
 // Base Wave End
 
 // Home Page Start
@@ -58,6 +60,8 @@
       }
    }
 }
+
 // Home Page End
+
 
 @import 'typography';

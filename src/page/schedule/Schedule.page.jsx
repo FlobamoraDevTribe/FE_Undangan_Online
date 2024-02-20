@@ -26,17 +26,25 @@ class SchedulePage extends Component {
                      />
                   </div>
                   <div className="container">
-                     <div className="mt-28 w-full">
+                     <div className="mt-28 w-full relative h-full bg-[url('/images/img-schedule-page.jpg')] bg-cover rounded-full shadow-2xl">
                         <img
-                           src="/images/img-schedule-page.jpg"
+                           src="/images/img-ring-photoframe.png"
                            alt="Images Schedule"
-                           className="w-full rounded-[500px]"
+                           className="w-full"
+                           style={{
+                              transform: "scale(1.2)"
+                           }}
+                        />
+                        <img
+                           src="/images/img-bunga-sepe.png"
+                           alt="Images Schedule"
+                           className="w-44 absolute bottom-[-50px] right-0"
                         />
                      </div>
                   </div>
 
                   <div className="container">
-                     <div className="mt-28 w-full bg-gradient-to-r from-orange-200 to-white-500 px-10 py-5 rounded-[30px] text-primary border-dashed border-4 border-primary shadow-2xl">
+                     <div className="mt-32 w-full bg-gradient-to-r from-orange-200 to-white-500 px-10 py-5 mb-20 rounded-[30px] text-primary border-dashed border-4 border-primary shadow-2xl">
                         <p className='font-bold text-center'>Save The Date</p>
                         <p className='font-normal text-[12px] mt-1 text-center'>Upcoming Event</p>
                         <div className="flex justify-between">

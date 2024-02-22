@@ -21,7 +21,9 @@ class SchedulePage extends Component {
                         extraClassTitle="mt-3"
                         second="Sabtu, 22 Januari 2024"
                         externalContent={
-                           <p className="font-bold text-primary text-center">We are getting maried</p>
+                           <p className="font-bold text-primary text-center">
+                              We are getting maried
+                           </p>
                         }
                      />
                   </div>
@@ -32,7 +34,7 @@ class SchedulePage extends Component {
                            alt="Images Schedule"
                            className="w-full"
                            style={{
-                              transform: "scale(1.2)"
+                              transform: 'scale(1.2)',
                            }}
                         />
                         <img
@@ -45,27 +47,29 @@ class SchedulePage extends Component {
 
                   <div className="container">
                      <div className="mt-32 w-full bg-gradient-to-r from-orange-200 to-white-500 px-10 py-5 mb-20 rounded-[30px] text-primary border-dashed border-4 border-primary shadow-2xl">
-                        <p className='font-bold text-center'>Save The Date</p>
-                        <p className='font-normal text-[12px] mt-1 text-center'>Upcoming Event</p>
+                        <p className="font-bold text-center">Save The Date</p>
+                        <p className="font-normal text-[12px] mt-1 text-center">
+                           Upcoming Event
+                        </p>
                         <div className="flex justify-between">
                            <div className="text-center">
-                              <p className='text-[40px]'>00</p>
-                              <p className='text-[13px]'>Hari</p>
+                              <p className="text-[40px]">00</p>
+                              <p className="text-[13px]">Hari</p>
                            </div>
-                           <p className='text-[40px]'>:</p>
+                           <p className="text-[40px]">:</p>
                            <div className="text-center">
-                              <p className='text-[40px]'>00</p>
-                              <p className='text-[13px]'>Jam</p>
+                              <p className="text-[40px]">00</p>
+                              <p className="text-[13px]">Jam</p>
                            </div>
-                           <p className='text-[40px]'>:</p>
+                           <p className="text-[40px]">:</p>
                            <div className="text-center">
-                              <p className='text-[40px]'>00</p>
-                              <p className='text-[13px]'>Menit</p>
+                              <p className="text-[40px]">00</p>
+                              <p className="text-[13px]">Menit</p>
                            </div>
-                           <p className='text-[40px]'>:</p>
+                           <p className="text-[40px]">:</p>
                            <div className="text-center">
-                              <p className='text-[40px]'>00</p>
-                              <p className='text-[13px]'>Detik</p>
+                              <p className="text-[40px]">00</p>
+                              <p className="text-[13px]">Detik</p>
                            </div>
                         </div>
                      </div>

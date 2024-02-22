@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+$primary-theme: #27668c;
+$secondary-theme: #ffd984;
+$tint-theme: #fff6de;
+
 // Base Container Start
 .workspace-container {
    @apply fixed h-full w-full overflow-hidden;
@@ -10,7 +14,6 @@
       @apply absolute overflow-hidden w-[414px] h-screen bg-[#FFF6DE];
    }
 }
-
 // Base Container End
 
 // Base Wave Start
@@ -45,6 +48,17 @@
       z-index: 2;
    }
 }
+
+section {
+   &.section-content-scroll-padding {
+      &:first-child {
+         @apply pt-0;
+      }
+
+      @apply h-screen pt-[80px] pb-[75px];
+   }
+}
+
 // Base Wave End
 
 // Home Page Start
@@ -75,3 +89,4 @@
 }
 
 @import 'typography';
+@import 'form';

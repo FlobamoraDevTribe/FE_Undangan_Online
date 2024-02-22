@@ -1,63 +1,55 @@
-const FormInput = (props) => {
+const FormTextArea = (props) => {
    const {
       id = '',
       extraClass = '',
       label = '',
-      type = 'text',
-      autoComplete = 'off',
       extraInputClass = '',
+      autoComplete = 'off',
       placeholder = '',
-      icon = '',
-      extraClassIcon = '',
-      min = '',
-      max = '',
+
+      rows = 3,
+      cols = 4,
 
       required = false,
       disabled = false,
       readOnly = false,
 
       actions = {
-         handleIcon: () => {},
          onChange: () => {},
       },
+
       other,
    } = props
 
-   const idInput = id || 'text-input-' + props.name
+   const myId = id || 'text-area-' + props.name
 
    return (
       <div className={'form-group ' + extraClass}>
          {label ? (
-            <label htmlFor={idInput} className="form-label">
+            <label htmlFor={myId} className="form-label">
                {label}
                <span className="text-danger-200 fs-16">
                   {required ? '*' : ''}
                </span>
             </label>
          ) : null}
-         <input
-            id={idInput}
-            type={type}
+         <textarea
             value={props.value || ''}
-            name={props.name}
             onChange={actions.onChange}
-            className={'form-control ' + extraInputClass}
-            disabled={disabled}
-            min={min !== '' ? min : ''}
-            max={max !== '' ? max : ''}
+            name={props.name}
+            className={'form-control ' + (extraInputClass || '')}
+            id={myId}
             autoComplete={autoComplete}
             placeholder={placeholder}
+            rows={rows}
+            cols={cols}
             readOnly={readOnly}
             required={required}
+            disabled={disabled}
             {...other}
          />
-         {icon ? (
-            <span className={extraClassIcon} onClick={actions.handleIcon}>
-               {icon}
-            </span>
-         ) : null}
       </div>
    )
 }
 
-export default FormInput
+export default FormTextArea

@@ -11,6 +11,10 @@
       border: 2px solid $primary-theme;
       border-radius: 12px;
 
+      &::placeholder {
+         color: $primary-theme;
+      }
+
       &:focus,
       &:focus-visible {
          outline: $primary-theme;

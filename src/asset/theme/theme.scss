@@ -19,6 +19,10 @@ $tint-theme: #fff6de;
 // Base Wave Start
 .padding-wave {
    @apply pt-[80px] pb-[75px];
+
+   &:has(.wp-image-without-padding) {
+      @apply pb-[51px];
+   }
 }
 
 .wp-wave-frame {
@@ -53,6 +57,10 @@ section {
    &.section-content-scroll-padding {
       &:first-child {
          @apply pt-0;
+      }
+
+      &:last-child {
+         @apply h-auto pt-0;
       }
 
       @apply h-screen pt-[80px] pb-[75px];

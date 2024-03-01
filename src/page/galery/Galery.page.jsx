@@ -3,30 +3,31 @@ import Wrap from '../../component/layout/Wrap'
 import { withNavigation } from '../../component/layout/Navigation'
 import PageTitle from '../../component/general/PageTitle'
 
+const images = [
+   '/images/galery.png',
+   '/images/img-landing-page.png',
+   '/images/galery.png',
+   '/images/galery.png',
+   '/images/galery.png',
+   '/images/galery.png',
+]
+
 class GaleryPage extends Component {
    state = {
       clickedImageSrc: null,
    }
 
-   handleImageClick = (imageSrc) => {
+   _handleImageClick = (imageSrc) => {
       this.setState({ clickedImageSrc: imageSrc })
       console.log('ll')
    }
 
-   handleCloseImage = () => {
+   _handleCloseImage = () => {
       this.setState({ clickedImageSrc: null })
    }
 
    render() {
       const { clickedImageSrc } = this.state
-      const images = [
-         '/images/galery.png',
-         '/images/img-landing-page.png',
-         '/images/galery.png',
-         '/images/galery.png',
-         '/images/galery.png',
-         '/images/galery.png',
-      ]
 
       return (
          <Wrap
@@ -34,7 +35,7 @@ class GaleryPage extends Component {
             hasOptionalBG
             actions={{
                prev: () => this.props.navigate('/direction'),
-               next: () => this.props.navigate('/'),
+               next: () => this.props.navigate('/surprise'),
             }}>
             <div className="content relative z-10">
                <PageTitle title="Photo Galery" extraClassTitle="uppercase" />
@@ -46,7 +47,7 @@ class GaleryPage extends Component {
                         src={image}
                         alt={`Image ${index}`}
                         className="transition-transform duration-300 transform hover:scale-105 object-cover object-center bg-white h-[196px] w-[131px] m-[3px] rounded-[17px]"
-                        onClick={() => this.handleImageClick(image)}
+                        onClick={() => this._handleImageClick(image)}
                      />
                   ))}
                </div>
@@ -55,7 +56,7 @@ class GaleryPage extends Component {
                      <div className="relative">
                         <button
                            className="absolute top-4 right-4 p-2 text-white rounded-lg "
-                           onClick={this.handleCloseImage}>
+                           onClick={this._handleCloseImage}>
                            <svg
                               className="w-6 h-6"
                               fill="none"

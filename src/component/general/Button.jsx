@@ -3,13 +3,17 @@ export const ButtonPrimary = ({
    type = 'button',
    disabled = false,
    isOutline = false,
+   isBtnSmall = false,
    children,
    onClick = () => {},
 }) => {
    return (
       <button
          className={
-            'text-lg font-normal px-[16px] py-[6px] ' +
+            'font-normal ' +
+            (isBtnSmall
+               ? 'text-md leading-[26px] px-[20px] py-[2px] '
+               : 'text-lg px-[16px] py-[6px] ') +
             (extraClassName || '') +
             (isOutline
                ? ' text-primary outline outline-1 outline-primary hover:bg-primary hover:text-white transition ease-in-out'

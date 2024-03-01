@@ -6,6 +6,8 @@ import FormInput from '../../component/form/FormInput'
 import { eventChange } from '../../helper/actionEvent.helper'
 import FormTextArea from '../../component/form/FormTextArea'
 import FdtBg from '../../asset/image/content/fdt-bg.png'
+import GiftImg from '../../asset/image/content/gift-amplop.png'
+import { ButtonPrimary } from '../../component/general/Button'
 
 class SurprisePage extends Component {
    state = {
@@ -68,13 +70,52 @@ class SurprisePage extends Component {
                         />
                      </div>
 
-                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Exercitationem error voluptate repellat nulla, nam quod,
-                        aliquid necessitatibus, eum ratione earum eius numquam
-                        dolorem modi voluptas cupiditate amet rerum officiis
-                        quos.
-                     </p>
+                     <button className="theme-switch-wrapper mb-[38px]">
+                        <label htmlFor="checkbox" className="theme-switch">
+                           <input
+                              type="checkbox"
+                              id="checkbox"
+                              className="theme-switch"
+                              defaultChecked
+                           />
+                           <div className="slider round"></div>
+                           <div
+                              className="text"
+                              data-checked="Hadir"
+                              data-unchecked="Tidak Hadir"></div>
+                        </label>
+                     </button>
+
+                     <div className="wp-card-gift mb-[30px]">
+                        <div className="card-gift">
+                           <div className="flex justify-between mb-0">
+                              <h5 className="text-[28px] font-bold text-primary uppercase">
+                                 Kado
+                              </h5>
+
+                              <img
+                                 src={GiftImg}
+                                 alt="Gift"
+                                 className="w-[133px] h-[85px] object-contain object-center"
+                              />
+                           </div>
+
+                           <p className="text-lg font-bold text-primary uppercase mb-0">
+                              BCA : 000000000
+                           </p>
+                           <p className="text-lg font-bold text-primary uppercase mb-0">
+                              A.N MARTEN DELACRONA
+                           </p>
+                        </div>
+                     </div>
+
+                     <div className="text-center">
+                        <ButtonPrimary
+                           isBtnSmall
+                           extraClassName="uppercase rounded-full border-[3px] border-white">
+                           Kirim
+                        </ButtonPrimary>
+                     </div>
                   </section>
 
                   <section className="section-content-scroll-padding">
@@ -99,7 +140,7 @@ class SurprisePage extends Component {
 
                      <div className="surprise-content mb-[130px]">
                         <p className="text-base font-bold text-primary text-center mb-1">
-                           Keluarga Mempelai Pria
+                           Keluarga Mempelai Wanita
                         </p>
 
                         <p className="text-base font-normal text-primary text-center">

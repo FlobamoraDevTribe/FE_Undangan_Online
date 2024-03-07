@@ -5,7 +5,7 @@ export const ButtonPrimary = ({
    isOutline = false,
    isBtnSmall = false,
    children,
-   onClick = () => {},
+   onClick = () => { },
 }) => {
    return (
       <button
@@ -33,7 +33,7 @@ export const ButtonSecondary = ({
    disabled = false,
    isOutline = false,
    children,
-   onClick = () => {},
+   onClick = () => { },
 }) => {
    return (
       <button
@@ -48,6 +48,16 @@ export const ButtonSecondary = ({
          type={type}
          onClick={onClick}>
          {children}
+      </button>
+   )
+}
+
+export const ButtonNavigation = ({
+   icon, onClick = () => { }, selected = false
+}) => {
+   return (
+      <button onClick={onClick} className={selected ? "bg-yellow-300 rounded-t-full p-[5px]" : ""}>
+         <img src={icon} alt="icon" />
       </button>
    )
 }

@@ -70,10 +70,31 @@ const Wrap = ({
                   {/* Example Floating Button Start */}
                   {hasWave ? (
                      <FloatingButton
-                        actions={{
-                           prev: actions.prev,
-                           next: actions.next,
-                        }}
+                        navigationList={
+                           [
+                              {
+                                 icon: "/images/home-nav.png",
+                                 action: () => { alert("OKE") },
+                                 selected: true
+                              },
+                              {
+                                 icon:"/images/bride-nav.png",
+                                 action: () => { alert("OKE") }
+                              },
+                              {
+                                 icon:"/images/date-nav.png",
+                                 action: () => { alert("OKE") }
+                              },
+                              {
+                                 icon:"/images/gallery-nav.png",
+                                 action: () => { alert("OKE") }
+                              },
+                              {
+                                 icon:"/images/gift-nav.png",
+                                 actions: () => { alert("OKE") }
+                              }
+                           ]
+                        }
                      />
                   ) : null}
                   {/* Example Floating Button End */}

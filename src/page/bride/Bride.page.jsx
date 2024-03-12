@@ -11,8 +11,11 @@ class BridePage extends Component {
             hasOptionalBG
             hasDefaultContainer={false}
             actions={{
-               prev: () => this.props.navigate('/schedule'),
-               next: () => this.props.navigate('/direction'),
+               bride: () => this.props.navigate('/bride'),
+               direction: () => this.props.navigate('/direction'),
+               galery: () => this.props.navigate('/galery'),
+               schedule: () => this.props.navigate('/schedule'),
+               surprise: () => this.props.navigate('/surprise')
             }}>
             <div className="content relative z-10 h-full">
                <div className="flex flex-col justify-between">

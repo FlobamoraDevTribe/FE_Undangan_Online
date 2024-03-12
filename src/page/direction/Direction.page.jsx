@@ -23,8 +23,11 @@ class DirectionPage extends Component {
             hasWave
             hasOptionalBG
             actions={{
-               prev: () => this.props.navigate('/bride'),
-               next: () => this.props.navigate('/galery'),
+               bride: () => this.props.navigate('/bride'),
+               direction: () => this.props.navigate('/direction'),
+               galery: () => this.props.navigate('/galery'),
+               schedule: () => this.props.navigate('/schedule'),
+               surprise: () => this.props.navigate('/surprise')
             }}>
             <div className="content relative z-10">
                <div className="mb-6">

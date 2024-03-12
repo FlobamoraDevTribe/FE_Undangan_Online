@@ -35,8 +35,11 @@ class SurprisePage extends Component {
             hasOptionalBG
             hasDefaultContainer={false}
             actions={{
-               prev: () => this.props.navigate('/galery'),
-               next: () => this.props.navigate('/'),
+               bride: () => this.props.navigate('/bride'),
+               direction: () => this.props.navigate('/direction'),
+               galery: () => this.props.navigate('/galery'),
+               schedule: () => this.props.navigate('/schedule'),
+               surprise: () => this.props.navigate('/surprise')
             }}>
             <div className="container">
                <div className="content relative z-10 h-full">

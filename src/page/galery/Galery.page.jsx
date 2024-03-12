@@ -34,8 +34,11 @@ class GaleryPage extends Component {
             hasWave
             hasOptionalBG
             actions={{
-               prev: () => this.props.navigate('/direction'),
-               next: () => this.props.navigate('/surprise'),
+               bride: () => this.props.navigate('/bride'),
+               direction: () => this.props.navigate('/direction'),
+               galery: () => this.props.navigate('/galery'),
+               schedule: () => this.props.navigate('/schedule'),
+               surprise: () => this.props.navigate('/surprise')
             }}>
             <div className="content relative z-10">
                <PageTitle title="Photo Galery" extraClassTitle="uppercase" />

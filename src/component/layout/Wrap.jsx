@@ -10,8 +10,11 @@ const Wrap = ({
    hasDefaultContainer = true,
    children,
    actions = {
-      prev: () => {},
-      next: () => {},
+      schedule:() => {},
+      bride:() => {},
+      direction:() => {},
+      galery:() => {},
+      surprise:() => {},
    },
 }) => {
    return (
@@ -73,25 +76,25 @@ const Wrap = ({
                         navigationList={
                            [
                               {
-                                 icon: "/images/home-nav.png",
-                                 action: () => { alert("OKE") },
-                                 selected: true
+                                 icon: "/images/schedule-nav.png",
+                                 action: actions.schedule
                               },
                               {
                                  icon:"/images/bride-nav.png",
-                                 action: () => { alert("OKE") }
+                                 action: actions.bride,
+                                 selected: true,
                               },
                               {
                                  icon:"/images/date-nav.png",
-                                 action: () => { alert("OKE") }
+                                 action: actions.direction
                               },
                               {
                                  icon:"/images/gallery-nav.png",
-                                 action: () => { alert("OKE") }
+                                 action: actions.galery
                               },
                               {
                                  icon:"/images/gift-nav.png",
-                                 actions: () => { alert("OKE") }
+                                 action: actions.surprise
                               }
                            ]
                         }

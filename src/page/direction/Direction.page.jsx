@@ -21,14 +21,7 @@ class DirectionPage extends Component {
       return (
          <Wrap
             hasWave
-            hasOptionalBG
-            actions={{
-               bride: () => this.props.navigate('/bride'),
-               direction: () => this.props.navigate('/direction'),
-               galery: () => this.props.navigate('/galery'),
-               schedule: () => this.props.navigate('/schedule'),
-               surprise: () => this.props.navigate('/surprise')
-            }}>
+            hasOptionalBG>
             <div className="content relative z-10">
                <div className="mb-6">
                   <PageTitle title="Detail Acara" extraClassTitle="uppercase" />

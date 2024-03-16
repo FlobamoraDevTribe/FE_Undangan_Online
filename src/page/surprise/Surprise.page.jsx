@@ -33,14 +33,7 @@ class SurprisePage extends Component {
          <Wrap
             hasWave
             hasOptionalBG
-            hasDefaultContainer={false}
-            actions={{
-               bride: () => this.props.navigate('/bride'),
-               direction: () => this.props.navigate('/direction'),
-               galery: () => this.props.navigate('/galery'),
-               schedule: () => this.props.navigate('/schedule'),
-               surprise: () => this.props.navigate('/surprise')
-            }}>
+            hasDefaultContainer={false}>
             <div className="container">
                <div className="content relative z-10 h-full">
                   <section className="section-content-scroll-padding">

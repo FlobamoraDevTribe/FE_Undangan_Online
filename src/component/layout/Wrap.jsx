@@ -8,14 +8,7 @@ const Wrap = ({
    hasWave = false,
    hasOptionalBG = false,
    hasDefaultContainer = true,
-   children,
-   actions = {
-      schedule:() => {},
-      bride:() => {},
-      direction:() => {},
-      galery:() => {},
-      surprise:() => {},
-   },
+   children
 }) => {
    return (
       <div className="workspace-container">
@@ -72,33 +65,17 @@ const Wrap = ({
 
                   {/* Example Floating Button Start */}
                   {hasWave ? (
-                     <FloatingButton
-                        navigationList={
-                           [
-                              {
-                                 icon: "/images/schedule-nav.png",
-                                 action: actions.schedule
-                              },
-                              {
-                                 icon:"/images/bride-nav.png",
-                                 action: actions.bride,
-                                 selected: true,
-                              },
-                              {
-                                 icon:"/images/date-nav.png",
-                                 action: actions.direction
-                              },
-                              {
-                                 icon:"/images/gallery-nav.png",
-                                 action: actions.galery
-                              },
-                              {
-                                 icon:"/images/gift-nav.png",
-                                 action: actions.surprise
-                              }
-                           ]
-                        }
-                     />
+                     <>
+                        <div className="absolute bottom-[53px] z-30 w-full">
+                           <div className="flex justify-center items-center w-full">
+                              <FloatingButton iconSource={"/images/schedule-nav.png"} linkTo={"/schedule"} />
+                              <FloatingButton iconSource={"/images/bride-nav.png"} linkTo={"/bride"} />
+                              <FloatingButton iconSource={"/images/date-nav.png"} linkTo={"/direction"} />
+                              <FloatingButton iconSource={"/images/gallery-nav.png"} linkTo={"/galery"} />
+                              <FloatingButton iconSource={"/images/gift-nav.png"} linkTo={"/surprise"} />
+                           </div>
+                        </div>
+                     </>
                   ) : null}
                   {/* Example Floating Button End */}
                </div>

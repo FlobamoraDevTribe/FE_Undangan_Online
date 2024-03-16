@@ -8,14 +8,7 @@ class SchedulePage extends Component {
       return (
          <Wrap
             hasWave
-            hasOptionalBG
-            actions={{
-               bride: () => this.props.navigate('/bride'),
-               direction: () => this.props.navigate('/direction'),
-               galery: () => this.props.navigate('/galery'),
-               schedule: () => this.props.navigate('/schedule'),
-               surprise: () => this.props.navigate('/surprise')
-            }}>
+            hasOptionalBG>
             <div className="content relative z-10 h-full">
                <div className="flex flex-col justify-between">
                   <div className="container">

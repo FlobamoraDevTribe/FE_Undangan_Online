@@ -3,6 +3,7 @@ import { ButtonPrimary } from '../../component/general/Button'
 import Wrap from '../../component/layout/Wrap'
 import { withNavigation } from '../../component/layout/Navigation'
 import PageTitle from '../../component/general/PageTitle'
+import { appPath } from '../../path/app.path'
 
 class HomePage extends Component {
    render() {
@@ -32,7 +33,7 @@ class HomePage extends Component {
                <div className="flex justify-center">
                   <ButtonPrimary
                      onClick={() => {
-                        this.props.navigate('/schedule')
+                        this.props.navigate(appPath.schedule)
                      }}
                      extraClassName="uppercase rounded-full">
                      Buka

@@ -3,12 +3,13 @@ import ImgWaveBottom from '../../asset/image/content/motif-bottom.png'
 import ImgFlowerTopRight from '../../asset/image/content/flower-top-right.png'
 import ImgFlowerBottomLeft from '../../asset/image/content/flower-bottom-left.png'
 import FloatingButton from '../general/FloatingButton'
+import { appPath } from '../../path/app.path'
 
 const Wrap = ({
    hasWave = false,
    hasOptionalBG = false,
    hasDefaultContainer = true,
-   children
+   children,
 }) => {
    return (
       <div className="workspace-container">
@@ -68,11 +69,26 @@ const Wrap = ({
                      <>
                         <div className="absolute bottom-[53px] z-30 w-full">
                            <div className="flex justify-center items-center w-full">
-                              <FloatingButton iconSource={"/images/schedule-nav.png"} linkTo={"/schedule"} />
-                              <FloatingButton iconSource={"/images/bride-nav.png"} linkTo={"/bride"} />
-                              <FloatingButton iconSource={"/images/date-nav.png"} linkTo={"/direction"} />
-                              <FloatingButton iconSource={"/images/gallery-nav.png"} linkTo={"/galery"} />
-                              <FloatingButton iconSource={"/images/gift-nav.png"} linkTo={"/surprise"} />
+                              <FloatingButton
+                                 iconSource={'/images/schedule-nav.png'}
+                                 linkTo={appPath.schedule}
+                              />
+                              <FloatingButton
+                                 iconSource={'/images/bride-nav.png'}
+                                 linkTo={appPath.bride}
+                              />
+                              <FloatingButton
+                                 iconSource={'/images/date-nav.png'}
+                                 linkTo={appPath.direction}
+                              />
+                              <FloatingButton
+                                 iconSource={'/images/gallery-nav.png'}
+                                 linkTo={appPath.gallery}
+                              />
+                              <FloatingButton
+                                 iconSource={'/images/gift-nav.png'}
+                                 linkTo={appPath.surprise}
+                              />
                            </div>
                         </div>
                      </>

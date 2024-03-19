@@ -90,7 +90,7 @@ class ExamplePage extends Component {
 
       return (
          <div className="container">
-            <div className="flex justify-between">
+            <div className="flex justify-between relative">
                <div className="w-7/12">
                   <h3 className="mb-4">Restaurant List</h3>
 
@@ -110,69 +110,70 @@ class ExamplePage extends Component {
                </div>
 
                <div className="w-4/12">
-                  <h3 className="mb-4">
-                     Detail Restaurant{' '}
-                     {!_.isEmpty(selectedRestaurant) ? (
-                        <p className="text-2xl font-medium">
-                           {selectedRestaurant.name}
-                        </p>
+                  <h3 className="mb-0">Detail Restaurant </h3>
+
+                  <div className="sticky top-4">
+                     {_.isEmpty(selectedRestaurant) ? (
+                        <h5 className="mt-4 mb-0">No Restaurant Selected</h5>
                      ) : (
-                        ''
-                     )}
-                  </h3>
-
-                  {_.isEmpty(selectedRestaurant) ? (
-                     <h5>No Restaurant Selected</h5>
-                  ) : (
-                     <>
-                        <p className="text-lg mb-4">Customer Review</p>
-
-                        <ul className="max-h-[300px] overflow-y-auto">
-                           {selectedRestaurant.customerReviews.map(
-                              (vm, index) => (
-                                 <li className="mb-4" key={index}>
-                                    <p>{vm.name || '-'}</p>
-                                    <p>{vm.review || '-'}</p>
-                                    <p>{vm.date || '-'}</p>
-                                 </li>
-                              ),
+                        <>
+                           {!_.isEmpty(selectedRestaurant) ? (
+                              <p className="text-2xl font-medium mb-4">
+                                 {selectedRestaurant.name}
+                              </p>
+                           ) : (
+                              ''
                            )}
-                        </ul>
 
-                        <form
-                           onSubmit={this._handleSubmitReview}
-                           className="mt-8">
-                           <FormInput
-                              id="name"
-                              name="name"
-                              value={formRequest.name}
-                              placeholder="Nama"
-                              actions={{
-                                 onChange: this._handleChange,
-                              }}
-                           />
+                           <p className="text-lg mb-4">Customer Review</p>
 
-                           <FormTextArea
-                              id="review"
-                              name="review"
-                              value={formRequest.review}
-                              placeholder="Review"
-                              rows={6}
-                              actions={{
-                                 onChange: this._handleChange,
-                              }}
-                           />
+                           <ul className="max-h-[300px] overflow-y-auto">
+                              {selectedRestaurant.customerReviews.map(
+                                 (vm, index) => (
+                                    <li className="mb-4" key={index}>
+                                       <p>{vm.name || '-'}</p>
+                                       <p>{vm.review || '-'}</p>
+                                       <p>{vm.date || '-'}</p>
+                                    </li>
+                                 ),
+                              )}
+                           </ul>
 
-                           <div className="d-flex justify-end">
-                              <ButtonPrimary
-                                 type="submit"
-                                 extraClassName="rounded-lg">
-                                 Submit
-                              </ButtonPrimary>
-                           </div>
-                        </form>
-                     </>
-                  )}
+                           <form
+                              onSubmit={this._handleSubmitReview}
+                              className="mt-8">
+                              <FormInput
+                                 id="name"
+                                 name="name"
+                                 value={formRequest.name}
+                                 placeholder="Nama"
+                                 actions={{
+                                    onChange: this._handleChange,
+                                 }}
+                              />
+
+                              <FormTextArea
+                                 id="review"
+                                 name="review"
+                                 value={formRequest.review}
+                                 placeholder="Review"
+                                 rows={6}
+                                 actions={{
+                                    onChange: this._handleChange,
+                                 }}
+                              />
+
+                              <div className="d-flex justify-end">
+                                 <ButtonPrimary
+                                    type="submit"
+                                    extraClassName="rounded-lg">
+                                    Submit
+                                 </ButtonPrimary>
+                              </div>
+                           </form>
+                        </>
+                     )}
+                  </div>
                </div>
             </div>
          </div>

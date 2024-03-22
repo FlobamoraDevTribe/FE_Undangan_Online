@@ -178,7 +178,7 @@ section {
 }
 
 .wp-card-gift {
-   @apply ms-3 -me-2 md:pe-5 md:mx-0;
+   @apply ms-3 -me-2 md:ps-[23px] md:mx-0 lg:ps-5;
 
    .card-gift {
       @apply card border-[5px] border-primary rounded-[26px] p-6;

@@ -1,9 +1,10 @@
-export const appPath = {
+const appPath = {
    home: '/',
    schedule: '/schedule',
    bride: '/bride',
-   direction: '/direction',
    gallery: '/gallery',
    surprise: '/surprise',
    example: '/example',
 }
+
+export default appPath

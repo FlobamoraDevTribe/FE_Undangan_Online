@@ -6,29 +6,28 @@ import PageTitle from '../../component/general/PageTitle'
 class BridePage extends Component {
    render() {
       return (
-         <Wrap
-            hasWave
-            hasOptionalBG
-            hasDefaultContainer={false}>
-            <div className="content relative z-10 h-full">
-               <div className="flex flex-col justify-between">
-                  <div className="container">
-                     <PageTitle
-                        title="Mempelai"
-                        second="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum sint porro."
-                        extraClassTitle="uppercase"
-                     />
-                  </div>
+         <Wrap hasWave hasOptionalBG hasDefaultContainer={false}>
+            <div className="flex flex-col justify-between">
+               <div className="container">
+                  <PageTitle
+                     title="Mempelai"
+                     second="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum sint porro."
+                     extraClassTitle="uppercase"
+                  />
+               </div>
 
-                  <div className="mt-10 w-full">
-                     <img
-                        src="/images/img-bride-page.png"
-                        alt="Images Bride"
-                        className="w-full rounded-[30px]"
-                     />
-                  </div>
+               <div className="mt-10 w-full">
+                  <img
+                     src="/images/img-bride-page.png"
+                     alt="Images Bride"
+                     className="w-full rounded-[30px]"
+                  />
+               </div>
+            </div>
 
-                  <div className="container text-center bg-[url('/images/img-shape-wave.png')] bg-auto bg-no-repeat w-full bg-center -mt-60 pb-20 pt-48 text-white">
+            <div className="wp-image-without-padding relative z-[5]">
+               <div className="bg-[url('/images/img-shape-wave.png')] bg-cover bg-center bg-no-repeat w-full h-full">
+                  <div className="container text-center -mt-72 pt-[70px] pb-[150px] text-white">
                      <h4>Marten Delacrona</h4>
                      <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing

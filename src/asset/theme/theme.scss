@@ -18,7 +18,7 @@ $tint-theme: #fff6de;
 
 // Base Wave Start
 .padding-wave {
-   @apply pt-[80px] pb-[75px];
+   @apply pt-[80px] pb-[150px];
 
    &:has(.wp-image-without-padding) {
       @apply pb-[51px];
@@ -192,6 +192,12 @@ section {
 .wp-direction {
    .card {
       @apply mb-4;
+   }
+}
+
+.map-full {
+   img {
+      box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.16);
    }
 }
 // Custom Style Page End

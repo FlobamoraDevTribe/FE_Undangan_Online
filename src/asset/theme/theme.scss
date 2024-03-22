@@ -18,21 +18,25 @@ $tint-theme: #fff6de;
 
 // Base Wave Start
 .padding-wave {
-   @apply pt-[80px] pb-[150px];
+   @apply pt-[100px] pb-[180px] md:pt-[80px] md:pb-[150px];
 
    &:has(.wp-image-without-padding) {
-      @apply pb-[51px];
+      @apply pb-[75px] md:pb-[51px];
    }
 }
 
 .wp-wave-frame {
    .frame-wave-top {
+      @apply h-[75px] md:h-[56px] w-full;
+
       position: absolute;
       top: 0;
       z-index: 20;
    }
 
    .frame-wave-bottom {
+      @apply h-[75px] md:h-[51px] w-full;
+
       position: absolute;
       bottom: 0;
       z-index: 20;
@@ -174,7 +178,7 @@ section {
 }
 
 .wp-card-gift {
-   padding-left: 1.25rem;
+   @apply ms-3 -me-2 md:pe-5 md:mx-0;
 
    .card-gift {
       @apply card border-[5px] border-primary rounded-[26px] p-6;

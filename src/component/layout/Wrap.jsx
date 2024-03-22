@@ -75,7 +75,7 @@ const Wrap = ({
                   {/* Example Floating Button Start */}
                   {hasWave ? (
                      <>
-                        <div className="absolute bottom-[51px] z-30 w-full">
+                        <div className="absolute bottom-[74px] md:bottom-[51px] z-30 w-full">
                            <div className="flex justify-center items-center w-full">
                               <FloatingButton
                                  iconSource={'/images/schedule-nav.png'}

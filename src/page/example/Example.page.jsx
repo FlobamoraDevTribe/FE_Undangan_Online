@@ -114,7 +114,7 @@ class ExamplePage extends Component {
 
                   <div className="sticky top-4">
                      {_.isEmpty(selectedRestaurant) ? (
-                        <h5 className="mt-4 mb-0">No Restaurant Selected</h5>
+                        <h5 className="mb-4">No Restaurant Selected</h5>
                      ) : (
                         <>
                            {!_.isEmpty(selectedRestaurant) ? (

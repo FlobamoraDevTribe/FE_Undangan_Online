@@ -4,6 +4,7 @@ const PageTitle = memo(
    ({
       title = '',
       second = '',
+      secondExternal = '',
       externalContent = '',
       extraClassTitle = '',
    }) => {
@@ -23,6 +24,7 @@ const PageTitle = memo(
                   {second}
                </p>
             ) : null}
+            {secondExternal}
          </>
       )
    },

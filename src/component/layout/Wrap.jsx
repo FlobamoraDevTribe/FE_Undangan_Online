@@ -3,12 +3,14 @@ import ImgWaveBottom from '../../asset/image/content/motif-bottom.png'
 import ImgFlowerTopRight from '../../asset/image/content/flower-top-right.png'
 import ImgFlowerBottomLeft from '../../asset/image/content/flower-bottom-left.png'
 import FloatingButton from '../general/FloatingButton'
-import { appPath } from '../../path/app.path'
+import appPath from '../../path/app.path'
+import directionPath from '../../path/direction.path'
 
 const Wrap = ({
    hasWave = false,
    hasOptionalBG = false,
    hasDefaultContainer = true,
+   isContentFullHeight = false,
    children,
 }) => {
    return (
@@ -29,7 +31,13 @@ const Wrap = ({
                               (hasDefaultContainer ? 'container' : '') +
                               ' padding-wave h-full overflow-y-auto scrollbar-hide'
                            }>
-                           {children}
+                           <div
+                              className={
+                                 'content relative z-10 ' +
+                                 (isContentFullHeight ? 'h-full' : '')
+                              }>
+                              {children}
+                           </div>
                         </div>
 
                         <div className="wp-wave-frame">
@@ -67,7 +75,7 @@ const Wrap = ({
                   {/* Example Floating Button Start */}
                   {hasWave ? (
                      <>
-                        <div className="absolute bottom-[53px] z-30 w-full">
+                        <div className="absolute bottom-[74px] md:bottom-[51px] z-30 w-full">
                            <div className="flex justify-center items-center w-full">
                               <FloatingButton
                                  iconSource={'/images/schedule-nav.png'}
@@ -79,7 +87,7 @@ const Wrap = ({
                               />
                               <FloatingButton
                                  iconSource={'/images/date-nav.png'}
-                                 linkTo={appPath.direction}
+                                 linkTo={directionPath.main}
                               />
                               <FloatingButton
                                  iconSource={'/images/gallery-nav.png'}

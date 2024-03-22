@@ -7,10 +7,9 @@ export default {
             center: true,
             padding: {
                DEFAULT: '1.875rem',
-               //  sm: '2rem',
-               //  lg: '4rem',
-               //  xl: '5rem',
-               //  '2xl': '6rem',
+               xs: '0.25rem',
+               sm: '2rem',
+               md: '1.875rem',
             },
          },
          colors: {
@@ -19,6 +18,7 @@ export default {
             tint: '#FFF6DE',
          },
          screens: {
+            xs: '320px',
             sm: '640px',
             md: '768px',
             lg: '1024px',

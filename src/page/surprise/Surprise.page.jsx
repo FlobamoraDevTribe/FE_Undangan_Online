@@ -30,205 +30,193 @@ class SurprisePage extends Component {
       const { name, notes } = this.state
 
       return (
-         <Wrap
-            hasWave
-            hasOptionalBG
-            hasDefaultContainer={false}>
+         <Wrap hasWave hasOptionalBG hasDefaultContainer={false}>
             <div className="container">
-               <div className="content relative z-10 h-full">
-                  <section className="section-content-scroll-padding">
-                     <div className="mb-8">
-                        <PageTitle
-                           title="Doa & Ucapan"
-                           extraClassTitle="uppercase"
-                        />
-                     </div>
-                     <div className="mb-[30px]">
-                        <FormInput
-                           id="name"
-                           name="name"
-                           value={name}
-                           placeholder="Nama"
-                           actions={{
-                              onChange: this._handleChange,
-                           }}
-                        />
-
-                        <FormTextArea
-                           id="notes"
-                           name="notes"
-                           value={notes}
-                           placeholder="Pesan untuk mempelai"
-                           rows={6}
-                           actions={{
-                              onChange: this._handleChange,
-                           }}
-                        />
-                     </div>
-
-                     <button className="theme-switch-wrapper mb-[38px]">
-                        <label htmlFor="checkbox" className="theme-switch">
-                           <input
-                              type="checkbox"
-                              id="checkbox"
-                              className="theme-switch"
-                              defaultChecked
-                           />
-                           <div className="slider round"></div>
-                           <div
-                              className="text"
-                              data-checked="Hadir"
-                              data-unchecked="Tidak Hadir"></div>
-                        </label>
-                     </button>
-
-                     <div className="wp-card-gift mb-[30px]">
-                        <div className="card-gift">
-                           <div className="flex justify-between mb-0">
-                              <h5 className="text-[28px] font-bold text-primary uppercase">
-                                 Kado
-                              </h5>
-
-                              <img
-                                 src={GiftImg}
-                                 alt="Gift"
-                                 className="w-[133px] h-[85px] object-contain object-center"
-                              />
-                           </div>
-
-                           <p className="text-lg font-bold text-primary uppercase mb-0">
-                              BCA : 000000000
-                           </p>
-                           <p className="text-lg font-bold text-primary uppercase mb-0">
-                              A.N MARTEN DELACRONA
-                           </p>
-                        </div>
-                     </div>
-
-                     <div className="text-center">
-                        <ButtonPrimary
-                           isBtnSmall
-                           extraClassName="uppercase rounded-full border-[3px] border-white">
-                           Kirim
-                        </ButtonPrimary>
-                     </div>
-                  </section>
-
-                  <section className="section-content-scroll-padding">
+               <section className="section-content-scroll-padding">
+                  <div className="mb-8">
                      <PageTitle
-                        title="Turut Mengundang"
-                        extraClassTitle="uppercase mb-[65px]"
+                        title="Doa & Ucapan"
+                        extraClassTitle="uppercase"
+                     />
+                  </div>
+                  <div className="mb-[30px]">
+                     <FormInput
+                        id="name"
+                        name="name"
+                        value={name}
+                        placeholder="Nama"
+                        actions={{
+                           onChange: this._handleChange,
+                        }}
                      />
 
-                     <div className="surprise-content mb-9">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Keluarga Mempelai Pria
-                        </p>
+                     <FormTextArea
+                        id="notes"
+                        name="notes"
+                        value={notes}
+                        placeholder="Pesan untuk mempelai"
+                        rows={6}
+                        actions={{
+                           onChange: this._handleChange,
+                        }}
+                     />
+                  </div>
 
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
-
-                     <div className="surprise-content mb-[130px]">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Keluarga Mempelai Wanita
-                        </p>
-
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
-                  </section>
-
-                  <section className="section-content-scroll-padding">
-                     <div className="mb-[50px]">
-                        <PageTitle
-                           title="Pesan"
-                           second="Para Undangan"
-                           extraClassTitle="uppercase"
+                  <button className="theme-switch-wrapper mb-[38px]">
+                     <label htmlFor="checkbox" className="theme-switch">
+                        <input
+                           type="checkbox"
+                           id="checkbox"
+                           className="theme-switch"
+                           defaultChecked
                         />
-                     </div>
+                        <div className="slider round"></div>
+                        <div
+                           className="text"
+                           data-checked="Hadir"
+                           data-unchecked="Tidak Hadir"></div>
+                     </label>
+                  </button>
 
-                     <div className="invitation-message mb-6">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Jonas Blue
+                  <div className="wp-card-gift mb-[30px]">
+                     <div className="card-gift">
+                        <div className="flex justify-between mb-0">
+                           <h5 className="text-[28px] font-bold text-primary uppercase">
+                              Kado
+                           </h5>
+
+                           <img
+                              src={GiftImg}
+                              alt="Gift"
+                              className="w-[133px] h-[85px] object-contain object-center"
+                           />
+                        </div>
+
+                        <p className="text-lg font-bold text-primary uppercase mb-0">
+                           BCA : 000000000
                         </p>
-
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
-
-                     <div className="invitation-message mb-6">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Lady Gaga
-                        </p>
-
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
-
-                     <div className="invitation-message mb-6">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Ronaldo
-                        </p>
-
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
+                        <p className="text-lg font-bold text-primary uppercase mb-0">
+                           A.N MARTEN DELACRONA
                         </p>
                      </div>
+                  </div>
 
-                     <div className="invitation-message mb-6">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Messi
-                        </p>
+                  <div className="text-center">
+                     <ButtonPrimary
+                        isBtnSmall
+                        extraClassName="uppercase rounded-full border-[3px] border-white">
+                        Kirim
+                     </ButtonPrimary>
+                  </div>
+               </section>
 
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
+               <section className="section-content-scroll-padding">
+                  <PageTitle
+                     title="Turut Mengundang"
+                     extraClassTitle="uppercase mb-[65px]"
+                  />
 
-                     <div className="invitation-message mb-9">
-                        <p className="text-base font-bold text-primary text-center mb-1">
-                           Mbappe
-                        </p>
+                  <div className="surprise-content mb-9">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Keluarga Mempelai Pria
+                     </p>
 
-                        <p className="text-base font-normal text-primary text-center">
-                           Lorem ipsum dolor sit amet consectetur adipisicing
-                           elit. Quod maiores aut ducimus ex, deserunt porro
-                           tempora facere unde iste exercitationem atque
-                           eligendi suscipit incidunt perferendis. Ex in
-                           repudiandae voluptates sint.
-                        </p>
-                     </div>
-                  </section>
-               </div>
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+
+                  <div className="surprise-content mb-[130px]">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Keluarga Mempelai Wanita
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+               </section>
+
+               <section className="section-content-scroll-padding">
+                  <div className="mb-[50px]">
+                     <PageTitle
+                        title="Pesan"
+                        second="Para Undangan"
+                        extraClassTitle="uppercase"
+                     />
+                  </div>
+
+                  <div className="invitation-message mb-6">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Jonas Blue
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+
+                  <div className="invitation-message mb-6">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Lady Gaga
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+
+                  <div className="invitation-message mb-6">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Ronaldo
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+
+                  <div className="invitation-message mb-6">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Messi
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+
+                  <div className="invitation-message mb-9">
+                     <p className="text-base font-bold text-primary text-center mb-1">
+                        Mbappe
+                     </p>
+
+                     <p className="text-base font-normal text-primary text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod maiores aut ducimus ex, deserunt porro tempora
+                        facere unde iste exercitationem atque eligendi suscipit
+                        incidunt perferendis. Ex in repudiandae voluptates sint.
+                     </p>
+                  </div>
+               </section>
             </div>
 
             <div className="wp-image-without-padding relative z-[5]">

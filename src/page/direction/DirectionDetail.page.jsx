@@ -7,6 +7,10 @@ import { withNavigation } from '../../component/layout/Navigation'
 import directionPath from '../../path/direction.path'
 
 class DirectionDetailPage extends Component {
+   _handleToMain = () => {
+      this.props.navigate(directionPath.main)
+   }
+
    render() {
       return (
          <Wrap hasWave hasOptionalBG>
@@ -34,7 +38,7 @@ class DirectionDetailPage extends Component {
 
                <button
                   className="bg-white rounded-full border-[3px] border-primary p-2"
-                  onClick={() => this.props.navigate(directionPath.main)}>
+                  onClick={this._handleToMain}>
                   <Icon.X size={32} strokeWidth={6} className="text-primary" />
                </button>
             </div>

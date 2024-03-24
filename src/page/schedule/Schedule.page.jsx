@@ -2,40 +2,47 @@ import { Component } from 'react'
 import Wrap from '../../component/layout/Wrap'
 import { withNavigation } from '../../component/layout/Navigation'
 import PageTitle from '../../component/general/PageTitle'
+import ImageCover from '../../component/general/ImageCover'
 
 class SchedulePage extends Component {
    render() {
       return (
          <Wrap hasWave hasOptionalBG>
             <div className="flex flex-col justify-between">
+               <PageTitle
+                  title="Marten & Mince"
+                  extraClassTitle="mt-3"
+                  second="Sabtu, 22 Januari 2024"
+                  externalContent={
+                     <p className="font-bold text-primary text-center">
+                        We are getting maried
+                     </p>
+                  }
+               />
+
                <div className="container">
-                  <PageTitle
-                     title="Marten & Mince"
-                     extraClassTitle="mt-3"
-                     second="Sabtu, 22 Januari 2024"
-                     externalContent={
-                        <p className="font-bold text-primary text-center">
-                           We are getting maried
-                        </p>
+                  <ImageCover
+                     src="/images/img-schedule-page.jpg"
+                     config={{
+                        width: 'w-[265px] md:w-full',
+                     }}
+                     extraClassContainer="mt-20"
+                     extraClassWrapping="rounded-full"
+                     externalAsset={
+                        <>
+                           <img
+                              src="/images/img-ring-photoframe.png"
+                              alt="Frame"
+                              className="absolute inset-0 w-[265px] scale-[1.2] md:w-full md:scale-[1.2]"
+                           />
+                           <img
+                              src="/images/img-bunga-sepe.png"
+                              alt="Bunga Sepe"
+                              className="absolute bottom-[-50px] right-0 w-36 md:w-44"
+                           />
+                        </>
                      }
                   />
-               </div>
-               <div className="container">
-                  <div className="mt-20 w-full relative h-full bg-[url('/images/img-schedule-page.jpg')] bg-cover rounded-full shadow-2xl">
-                     <img
-                        src="/images/img-ring-photoframe.png"
-                        alt="Images Schedule"
-                        className="w-full"
-                        style={{
-                           transform: 'scale(1.2)',
-                        }}
-                     />
-                     <img
-                        src="/images/img-bunga-sepe.png"
-                        alt="Images Schedule"
-                        className="w-44 absolute bottom-[-50px] right-0"
-                     />
-                  </div>
                </div>
 
                <div className="container">

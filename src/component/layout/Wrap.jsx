@@ -2,9 +2,8 @@ import ImgWaveTop from '../../asset/image/content/motif-top.png'
 import ImgWaveBottom from '../../asset/image/content/motif-bottom.png'
 import ImgFlowerTopRight from '../../asset/image/content/flower-top-right.png'
 import ImgFlowerBottomLeft from '../../asset/image/content/flower-bottom-left.png'
-import FloatingButton from '../general/FloatingButton'
-import appPath from '../../path/app.path'
-import directionPath from '../../path/direction.path'
+import BottomNavbar from './BottomNavbar'
+import { WaveContent } from '../general/ImageWave'
 
 const Wrap = ({
    hasWave = false,
@@ -40,18 +39,12 @@ const Wrap = ({
                            </div>
                         </div>
 
-                        <div className="wp-wave-frame">
-                           <img
-                              src={ImgWaveTop}
-                              className="frame-wave-top"
-                              alt="motif-top"
-                           />
-                           <img
-                              src={ImgWaveBottom}
-                              className="frame-wave-bottom"
-                              alt="motif-bottom"
-                           />
-                        </div>
+                        <WaveContent
+                           src={{
+                              top: ImgWaveTop,
+                              bottom: ImgWaveBottom,
+                           }}
+                        />
                      </>
                   ) : (
                      children
@@ -72,36 +65,7 @@ const Wrap = ({
                      </div>
                   ) : null}
 
-                  {/* Example Floating Button Start */}
-                  {hasWave ? (
-                     <>
-                        <div className="absolute bottom-[74px] md:bottom-[51px] z-30 w-full">
-                           <div className="flex justify-center items-center w-full">
-                              <FloatingButton
-                                 iconSource={'/images/schedule-nav.png'}
-                                 linkTo={appPath.schedule}
-                              />
-                              <FloatingButton
-                                 iconSource={'/images/bride-nav.png'}
-                                 linkTo={appPath.bride}
-                              />
-                              <FloatingButton
-                                 iconSource={'/images/date-nav.png'}
-                                 linkTo={directionPath.main}
-                              />
-                              <FloatingButton
-                                 iconSource={'/images/gallery-nav.png'}
-                                 linkTo={appPath.gallery}
-                              />
-                              <FloatingButton
-                                 iconSource={'/images/gift-nav.png'}
-                                 linkTo={appPath.surprise}
-                              />
-                           </div>
-                        </div>
-                     </>
-                  ) : null}
-                  {/* Example Floating Button End */}
+                  {hasWave ? <BottomNavbar /> : null}
                </div>
             </div>
          </div>
